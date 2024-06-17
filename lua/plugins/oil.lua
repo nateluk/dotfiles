@@ -6,6 +6,12 @@ return {
   config = function()
     require('oil').setup {
       delete_to_trash = true,
+      view_options = {
+        sort = {
+          { 'type', 'asc' },
+        },
+        show_hidden = true,
+      },
     }
     vim.keymap.set('n', '-', '<CMD>Oil<CR>', { desc = 'Open parent directory' })
   end,
