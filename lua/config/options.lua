@@ -2,6 +2,9 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
+-- for some plugins: bufferline, noice, etc.
+vim.opt.termguicolors = true
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
@@ -54,7 +57,8 @@ vim.opt.scrolloff = 10
 vim.opt.hlsearch = true
 
 vim.opt.expandtab = true
-vim.opt.tabstop = 4
+vim.opt.shiftwidth = 2
+vim.opt.tabstop = 2
 
 -- Highlight when yanking (copying) text
 vim.api.nvim_create_autocmd('TextYankPost', {
