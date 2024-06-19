@@ -1,10 +1,9 @@
 return {
   -- Neovim UI
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  {
-    'folke/zen-mode.nvim',
-  },
+  { 'folke/zen-mode.nvim' },
 
   -- LSP
   { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
