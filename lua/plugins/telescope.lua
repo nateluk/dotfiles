@@ -18,6 +18,13 @@ return { -- Fuzzy Finder (files, lsp, etc)
           n = {
             ['q'] = actions.close,
           },
+          i = {
+            ['<C-j>'] = actions.move_selection_next,
+            ['<C-k>'] = actions.move_selection_previous,
+          },
+        },
+        file_ignore_patterns = {
+          '.git/',
         },
       },
       extensions = {
