@@ -12,6 +12,7 @@ return {
           return ' ' .. icon .. count
         end,
       },
+      highlights = require('catppuccin.groups.integrations.bufferline').get(),
     }
 
     vim.keymap.set('n', 't', '<Cmd>BufferLineCycleNext<CR>', { desc = 'BufferLineCycleNext' })
