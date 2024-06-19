@@ -7,7 +7,7 @@ return {
       -- Customize or remove this keymap to your liking
       '<leader>f',
       function()
-        require('conform').format { async = true, lsp_format = "fallback" }
+        require('conform').format { async = true, lsp_format = 'fallback' }
       end,
       mode = '',
       desc = 'Format buffer',
@@ -24,14 +24,15 @@ return {
       html = { 'prettier' },
       css = { 'prettier' },
       markdown = { 'prettier' },
+      -- bicep = {},
     },
     -- Set up format-on-save
-    format_on_save = { timeout_ms = 500, lsp_format = "fallback" },
+    format_on_save = { timeout_ms = 500, lsp_format = 'fallback' },
     -- Customize formatters
     formatters = {
       prettier = {
         command = 'prettier',
-        args = { '--write', '--print-width', '120', '$FILENAME', },
+        args = { '--write', '--print-width', '120', '$FILENAME' },
         stdin = false,
       },
     },
