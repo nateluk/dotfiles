@@ -3,9 +3,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- New tab
 vim.keymap.set('n', 'te', ':tabedit')
 
--- Close tab
-vim.keymap.set('n', '<C-w>', ':bd<Return>', { desc = 'Close Buffer' })
-
 -- Save file
 vim.keymap.set('n', '<C-s>', ':w<Return>')
 

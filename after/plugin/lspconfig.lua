@@ -66,7 +66,7 @@ cmp.setup {
     ['<C-d>'] = cmp.mapping.scroll_docs(4),
 
     -- luasnip_supertab
-    ['<Tab>'] = cmp_action.luasnip_supertab(),
+    -- ['<Tab>'] = cmp_action.luasnip_supertab(),
     ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
   },
 
