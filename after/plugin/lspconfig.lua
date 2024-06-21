@@ -67,7 +67,7 @@ cmp.setup {
 
     -- luasnip_supertab
     -- ['<Tab>'] = cmp_action.luasnip_supertab(),
-    ['<S-Tab>'] = cmp_action.luasnip_shift_supertab(),
+    ['<S-Tab>'] = cmp_action.luasnip_supertab(),
   },
 
   formatting = lsp_zero.cmp_format { details = true },

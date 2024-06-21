@@ -21,8 +21,8 @@ vim.keymap.set('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
 vim.keymap.set('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
 
 -- Split windows
-vim.keymap.set('n', 'ss', ':split<Return><C-w>w')
-vim.keymap.set('n', 'sv', ':vsplit<Return><C-w>w')
+vim.keymap.set('n', 'ss', ':split<Return>')
+vim.keymap.set('n', 'sv', ':vsplit<Return>')
 
 -- Move between windows
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
@@ -34,3 +34,8 @@ vim.keymap.set('n', 'q', '<cmd>q<CR>', { desc = 'Close window' })
 -- Move lines up/down
 vim.keymap.set('v', '<C-j>', ":m '>+1<CR>gv=gv") -- Shift visual selected line down
 vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv") -- Shift visual selected line up
+
+-- Map a key combination to the Lua command in normal mode
+vim.keymap.set('n', '<leader>of', function()
+  vim.ui.open(vim.fn.expand '%')
+end, { desc = 'Open file in browser' })
