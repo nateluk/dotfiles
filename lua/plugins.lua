@@ -4,6 +4,22 @@ return {
   { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
+  -- Telescope
+  {
+    'nvim-telescope/telescope.nvim',
+    event = 'VimEnter',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      {
+        'nvim-telescope/telescope-fzf-native.nvim',
+        build = 'make',
+      },
+      { 'nvim-telescope/telescope-ui-select.nvim' },
+      { 'nvim-tree/nvim-web-devicons' },
+    },
+  },
+  { 'nvim-telescope/telescope-file-browser.nvim' },
+
   -- LSP
   { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
   { 'williamboman/mason.nvim', config = true },
