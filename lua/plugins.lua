@@ -4,6 +4,7 @@ return {
   { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
+  { 'rose-pine/neovim', name = 'rose-pine' },
 
   -- File browser
   { 'stevearc/oil.nvim', event = 'VimEnter' },
