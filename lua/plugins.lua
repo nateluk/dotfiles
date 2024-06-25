@@ -3,6 +3,7 @@ return {
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+  { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
 
   -- File browser
   { 'stevearc/oil.nvim', event = 'VimEnter' },
