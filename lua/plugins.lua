@@ -6,6 +6,7 @@ return {
 
   -- File browser
   { 'stevearc/oil.nvim', event = 'VimEnter' },
+  { 'nvim-tree/nvim-tree.lua' },
 
   -- Telescope
   {
