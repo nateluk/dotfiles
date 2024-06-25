@@ -4,6 +4,9 @@ return {
   { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
+  -- File browser
+  { 'stevearc/oil.nvim', event = 'VimEnter' },
+
   -- Telescope
   {
     'nvim-telescope/telescope.nvim',
@@ -18,7 +21,7 @@ return {
       { 'nvim-tree/nvim-web-devicons' },
     },
   },
-  { 'nvim-telescope/telescope-file-browser.nvim' },
+  -- { 'nvim-telescope/telescope-file-browser.nvim' },
 
   -- LSP
   { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
