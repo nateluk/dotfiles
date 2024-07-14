@@ -1,16 +1,24 @@
 return {
   -- Neovim UI
+  {
+    'folke/tokyonight.nvim',
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
   { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'folke/zen-mode.nvim' },
 
   -- File browser
   { 'stevearc/oil.nvim', event = 'VimEnter' },
   { 'nvim-tree/nvim-tree.lua' },
 
   -- Telescope
+
   {
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
@@ -25,6 +33,7 @@ return {
     },
   },
   -- { 'nvim-telescope/telescope-file-browser.nvim' },
+  { 'nvim-pack/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- LSP
   { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
@@ -40,6 +49,7 @@ return {
   { 'rafamadriz/friendly-snippets' },
 
   -- Editing tools
+  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
   'github/copilot.vim',
   'tpope/vim-surround',
 

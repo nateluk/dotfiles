@@ -21,7 +21,7 @@ return {
       python = { 'isort', 'black' },
       javascript = { 'prettier' },
       typescript = { 'prettier' },
-      html = { 'prettier' },
+      html = { 'prettierd' },
       css = { 'prettier' },
       markdown = { 'prettier' },
       -- bicep = {},
