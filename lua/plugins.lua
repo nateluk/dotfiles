@@ -13,12 +13,21 @@ return {
   { 'rose-pine/neovim', name = 'rose-pine' },
   { 'folke/zen-mode.nvim' },
 
+  -- Git
+  {
+    'NeogitOrg/neogit',
+    dependencies = {
+      'nvim-lua/plenary.nvim', -- required
+      'sindrets/diffview.nvim', -- optional - Diff integration
+      'nvim-telescope/telescope.nvim', -- optional
+    },
+    config = true,
+  },
+
   -- File browser
   { 'stevearc/oil.nvim', event = 'VimEnter' },
-  { 'nvim-tree/nvim-tree.lua' },
 
   -- Telescope
-
   {
     'nvim-telescope/telescope.nvim',
     event = 'VimEnter',
@@ -32,7 +41,6 @@ return {
       { 'nvim-tree/nvim-web-devicons' },
     },
   },
-  -- { 'nvim-telescope/telescope-file-browser.nvim' },
   { 'nvim-pack/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- LSP
