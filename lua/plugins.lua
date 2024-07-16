@@ -1,5 +1,6 @@
 return {
   -- Neovim UI
+  { 'navarasu/onedark.nvim' },
   {
     'folke/tokyonight.nvim',
     lazy = false,

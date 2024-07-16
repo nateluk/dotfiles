@@ -1,5 +1,5 @@
 require('catppuccin').setup {
-  flavour = 'mocha', -- latte, frappe, macchiato, mocha
+  flavour = 'macchiato', -- latte, frappe, macchiato, mocha
   transparent_background = false, -- disables setting the background color.
   show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
   term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
@@ -26,10 +26,70 @@ require('catppuccin').setup {
     operators = {},
     -- miscs = {}, -- Uncomment to turn off hard-coded styles
   },
-  color_overrides = {},
+  highlight_overrides = {
+    all = function(colors)
+      return {
+        CurSearch = { bg = colors.sky },
+        IncSearch = { bg = colors.sky },
+        CursorLineNr = { fg = colors.blue, style = { 'bold' } },
+        DashboardFooter = { fg = colors.overlay0 },
+        TreesitterContextBottom = { style = {} },
+        WinSeparator = { fg = colors.overlay0, style = { 'bold' } },
+        ['@markup.italic'] = { fg = colors.blue, style = { 'italic' } },
+        ['@markup.strong'] = { fg = colors.blue, style = { 'bold' } },
+        Headline = { style = { 'bold' } },
+        Headline1 = { fg = colors.blue, style = { 'bold' } },
+        Headline2 = { fg = colors.pink, style = { 'bold' } },
+        Headline3 = { fg = colors.lavender, style = { 'bold' } },
+        Headline4 = { fg = colors.green, style = { 'bold' } },
+        Headline5 = { fg = colors.peach, style = { 'bold' } },
+        Headline6 = { fg = colors.flamingo, style = { 'bold' } },
+        rainbow1 = { fg = colors.blue, style = { 'bold' } },
+        rainbow2 = { fg = colors.pink, style = { 'bold' } },
+        rainbow3 = { fg = colors.lavender, style = { 'bold' } },
+        rainbow4 = { fg = colors.green, style = { 'bold' } },
+        rainbow5 = { fg = colors.peach, style = { 'bold' } },
+        rainbow6 = { fg = colors.flamingo, style = { 'bold' } },
+      }
+    end,
+  },
+  color_overrides = {
+    macchiato = {
+      rosewater = '#F5B8AB',
+      flamingo = '#F29D9D',
+      pink = '#AD6FF7',
+      mauve = '#FF8F40',
+      red = '#E66767',
+      maroon = '#EB788B',
+      peach = '#FAB770',
+      yellow = '#FACA64',
+      green = '#70CF67',
+      teal = '#4CD4BD',
+      sky = '#61BDFF',
+      sapphire = '#4BA8FA',
+      blue = '#00BFFF',
+      lavender = '#00BBCC',
+      text = '#C1C9E6',
+      subtext1 = '#A3AAC2',
+      subtext0 = '#8E94AB',
+      overlay2 = '#7D8296',
+      overlay1 = '#676B80',
+      overlay0 = '#747681',
+      surface2 = '#3A3D4A',
+      surface1 = '#2F313D',
+      surface0 = '#1D1E29',
+      base = '#0b0b12',
+      mantle = '#11111a',
+      crust = '#191926',
+    },
+  },
   custom_highlights = {},
   default_integrations = true,
   integrations = {
+    telescope = {
+      enabled = true,
+      style = 'nvchad',
+    },
     cmp = true,
     gitsigns = true,
     nvimtree = true,
@@ -66,72 +126,6 @@ require('kanagawa').setup {
     dark = 'wave', -- try "dragon" !
     light = 'lotus',
   },
-}
-
-require('rose-pine').setup {
-  variant = 'main', -- auto, main, moon, or dawn
-  dark_variant = 'main', -- main, moon, or dawn
-  dim_inactive_windows = false,
-  extend_background_behind_borders = true,
-
-  enable = {
-    terminal = true,
-    legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-    migrations = true, -- Handle deprecated options automatically
-  },
-
-  styles = {
-    bold = true,
-    italic = true,
-    transparency = false,
-  },
-
-  groups = {
-    border = 'muted',
-    link = 'iris',
-    panel = 'surface',
-
-    error = 'love',
-    hint = 'iris',
-    info = 'foam',
-    note = 'pine',
-    todo = 'rose',
-    warn = 'gold',
-
-    git_add = 'foam',
-    git_change = 'rose',
-    git_delete = 'love',
-    git_dirty = 'rose',
-    git_ignore = 'muted',
-    git_merge = 'iris',
-    git_rename = 'pine',
-    git_stage = 'iris',
-    git_text = 'rose',
-    git_untracked = 'subtle',
-
-    h1 = 'iris',
-    h2 = 'foam',
-    h3 = 'rose',
-    h4 = 'gold',
-    h5 = 'pine',
-    h6 = 'foam',
-  },
-
-  highlight_groups = {
-    ['@lsp.type.property.typescript'] = { fg = 'rose' },
-  },
-
-  before_highlight = function(group, highlight, palette)
-    -- Disable all undercurls
-    -- if highlight.undercurl then
-    --     highlight.undercurl = false
-    -- end
-    --
-    -- Change palette colour
-    -- if highlight.fg == palette.pine then
-    --     highlight.fg = palette.foam
-    -- end
-  end,
 }
 
 -- setup must be called before loading
