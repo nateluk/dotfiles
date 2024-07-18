@@ -1,10 +1,32 @@
 return {
   -- Neovim UI
+  'lewis6991/gitsigns.nvim',
   { 'rose-pine/neovim', name = 'rose-pine' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = { 'nvim-tree/nvim-web-devicons' },
+  },
+  {
+    'folke/noice.nvim',
+    event = 'VeryLazy',
+    dependencies = {
+      'MunifTanjim/nui.nvim',
+      'rcarriga/nvim-notify',
+    },
+  },
   -- File browser
   { 'stevearc/oil.nvim' },
+
+  -- Formatter
+  'stevearc/conform.nvim',
+
+  -- Treesitter
+  'nvim-treesitter/nvim-treesitter-context',
+  {
+    'nvim-treesitter/nvim-treesitter',
+    build = ':TSUpdate',
+  },
 
   -- Telescope
   {
@@ -21,9 +43,6 @@ return {
     },
   },
 
-  -- Global find and replace
-  { 'nvim-pack/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
-
   -- LSP
   { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
   { 'williamboman/mason.nvim', config = true },
@@ -38,7 +57,15 @@ return {
   { 'rafamadriz/friendly-snippets' },
 
   -- Editing tools
+  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  'windwp/nvim-ts-autotag',
+  'numToStr/Comment.nvim',
   'f-person/git-blame.nvim',
+  {
+    'windwp/nvim-autopairs',
+    event = 'InsertEnter',
+    config = true,
+  },
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
   'github/copilot.vim',
   'tpope/vim-surround',
@@ -55,6 +82,28 @@ return {
       'nvim-neotest/neotest-jest',
     },
   },
+
+  -- Lazygit
+  {
+    'kdheepak/lazygit.nvim',
+    cmd = {
+      'LazyGit',
+      'LazyGitConfig',
+      'LazyGitCurrentFile',
+      'LazyGitFilter',
+      'LazyGitFilterCurrentFile',
+    },
+    keys = {
+      { '<leader>lg', '<cmd>LazyGit<cr>', desc = '[L]azy[G]it' },
+    },
+  },
+
+  -- Utils
+  {
+    'folke/which-key.nvim',
+    event = 'VeryLazy',
+  },
+  { 'nvim-pack/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } }, -- Global find and replace
 
   -- Lua specific
   {
