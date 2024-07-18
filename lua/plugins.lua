@@ -1,9 +1,6 @@
 return {
   -- Neovim UI
-  { 'tiagovla/tokyodark.nvim' },
   { 'rose-pine/neovim', name = 'rose-pine' },
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-  { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
   -- File browser
@@ -23,6 +20,8 @@ return {
       { 'nvim-tree/nvim-web-devicons' },
     },
   },
+
+  -- Global find and replace
   { 'nvim-pack/nvim-spectre', dependencies = { 'nvim-lua/plenary.nvim' } },
 
   -- LSP
@@ -45,7 +44,7 @@ return {
   'tpope/vim-surround',
   'wellle/targets.vim',
 
-  -- Other
+  -- For jest tests
   {
     'nvim-neotest/neotest',
     dependencies = {
@@ -56,6 +55,8 @@ return {
       'nvim-neotest/neotest-jest',
     },
   },
+
+  -- Lua specific
   {
     'folke/lazydev.nvim',
     ft = 'lua', -- only load on lua files
