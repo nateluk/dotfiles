@@ -1,32 +1,13 @@
 return {
   -- Neovim UI
-  { 'navarasu/onedark.nvim' },
-  {
-    'folke/tokyonight.nvim',
-    lazy = false,
-    priority = 1000,
-    opts = {},
-  },
+  { 'tiagovla/tokyodark.nvim' },
+  { 'rose-pine/neovim', name = 'rose-pine' },
   { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   { 'rebelot/kanagawa.nvim' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
-  { 'akinsho/bufferline.nvim', version = '*', dependencies = 'nvim-tree/nvim-web-devicons' },
-  { 'rose-pine/neovim', name = 'rose-pine' },
-  { 'folke/zen-mode.nvim' },
-
-  -- Git
-  {
-    'NeogitOrg/neogit',
-    dependencies = {
-      'nvim-lua/plenary.nvim', -- required
-      'sindrets/diffview.nvim', -- optional - Diff integration
-      'nvim-telescope/telescope.nvim', -- optional
-    },
-    config = true,
-  },
 
   -- File browser
-  { 'stevearc/oil.nvim', event = 'VimEnter' },
+  { 'stevearc/oil.nvim' },
 
   -- Telescope
   {
@@ -58,9 +39,11 @@ return {
   { 'rafamadriz/friendly-snippets' },
 
   -- Editing tools
+  'f-person/git-blame.nvim',
   { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
   'github/copilot.vim',
   'tpope/vim-surround',
+  'wellle/targets.vim',
 
   -- Other
   {

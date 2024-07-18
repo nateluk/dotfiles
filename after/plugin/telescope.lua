@@ -38,35 +38,12 @@ require('telescope').setup {
       override_file_sorter = true, -- override the file sorter
       case_mode = 'smart_case', -- or "ignore_case" or "respect_case"
     },
-    -- file_browser = {
-    --   theme = 'dropdown',
-    --   hijack_netrw = true,
-    --   path = '%:p:h',
-    --   cwd = telescope_buffer_dir(),
-    --   respect_gitignore = false,
-    --   hidden = true,
-    --   grouped = true,
-    --   previewer = false,
-    --   initial_mode = 'normal',
-    --   layout_config = { height = 30, width = 120 },
-    --   mappings = {
-    --     ['i'] = {
-    --       -- your custom insert mode mappings
-    --     },
-    --     ['n'] = {
-    --       -- your custom normal mode mappings
-    --       ['N'] = fb_actions.create,
-    --       ['-'] = fb_actions.goto_parent_dir,
-    --     },
-    --   },
-    -- },
   },
 }
 
 -- Enable Telescope extensions if they are installed
 pcall(require('telescope').load_extension, 'fzf')
 pcall(require('telescope').load_extension, 'ui-select')
--- require('telescope').load_extension 'file_browser'
 
 -- See `:help telescope.builtin`
 local builtin = require 'telescope.builtin'
@@ -103,7 +80,3 @@ end, { desc = '[S]earch [/] in Open Files' })
 vim.keymap.set('n', '<leader>sn', function()
   builtin.find_files { cwd = vim.fn.stdpath 'config' }
 end, { desc = '[S]earch [N]eovim files' })
-
--- vim.keymap.set('n', 'sf', function()
---   require('telescope').extensions.file_browser.file_browser()
--- end)
