@@ -36,6 +36,9 @@ vim.keymap.set('v', '<C-k>', ":m '<-2<CR>gv=gv") -- Shift visual selected line u
 -- make ctrl+c the same as esc
 vim.keymap.set('i', '<C-c>', '<Esc>')
 
+-- Lazygit
+vim.keymap.set('n', '<leader>lg', '<cmd>LazyGit<CR>', { desc = '[L]azy[G]it' })
+
 -- Map a key combination to the Lua command in normal mode
 vim.keymap.set('n', '<leader>of', function()
   vim.ui.open(vim.fn.expand '%')
