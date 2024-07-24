@@ -4,7 +4,7 @@ require('conform').setup {
     python = { 'isort', 'black' },
     javascript = { 'prettier' },
     typescript = { 'prettier' },
-    html = { 'prettierd' },
+    html = { 'prettier' },
     css = { 'prettier' },
     markdown = { 'prettier' },
     yaml = { 'prettier' },

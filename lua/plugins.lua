@@ -1,7 +1,11 @@
 return {
+  -- Colorschemes
+  { 'rose-pine/neovim', name = 'rose-pine' },
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
+  '0xstepit/flow.nvim',
+
   -- Neovim UI
   'lewis6991/gitsigns.nvim',
-  { 'rose-pine/neovim', name = 'rose-pine' },
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   {
     'nvim-lualine/lualine.nvim',
@@ -12,8 +16,12 @@ return {
     event = 'VeryLazy',
     dependencies = {
       'MunifTanjim/nui.nvim',
-      'rcarriga/nvim-notify',
     },
+  },
+  {
+    'MeanderingProgrammer/markdown.nvim',
+    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
+    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
   },
   -- File browser
   { 'stevearc/oil.nvim' },
@@ -22,7 +30,6 @@ return {
   'stevearc/conform.nvim',
 
   -- Treesitter
-  'nvim-treesitter/nvim-treesitter-context',
   {
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
@@ -57,7 +64,12 @@ return {
   { 'rafamadriz/friendly-snippets' },
 
   -- Editing tools
-  'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+  {
+    'okuuva/auto-save.nvim',
+    cmd = 'ASToggle', -- optional for lazy loading on command
+    event = { 'InsertLeave', 'TextChanged' }, -- optional for lazy loading on trigger events
+  },
   'windwp/nvim-ts-autotag',
   'numToStr/Comment.nvim',
   'f-person/git-blame.nvim',

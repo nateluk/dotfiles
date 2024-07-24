@@ -1,5 +1,8 @@
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+-- For neovide to paste in insertmode
+vim.keymap.set('i', 'D-v', '<C-\\><C-o>"+p', { noremap = true, silent = true })
+
 -- New tab
 vim.keymap.set('n', 'te', ':tabedit')
 
