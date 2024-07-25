@@ -1,6 +1,6 @@
 require('rose-pine').setup {
   variant = 'main', -- auto, main, moon, or dawn
-  dim_inactive_windows = false,
+  dim_inactive_windows = true,
   styles = {
     italic = false,
     transparency = true,
@@ -14,8 +14,8 @@ require('rose-pine').setup {
     TelescopeTitle = { fg = 'base', bg = 'love' },
     TelescopePromptTitle = { fg = 'base', bg = 'pine' },
     TelescopePreviewTitle = { fg = 'base', bg = 'iris' },
-    TelescopePromptNormal = { fg = 'text', bg = 'surface' },
-    TelescopePromptBorder = { fg = 'surface', bg = 'surface' },
+    TelescopePromptNormal = { fg = 'text', bg = 'overlay' },
+    TelescopePromptBorder = { fg = 'overlay', bg = 'overlay' },
     ['@lsp.type.property.typescript'] = { fg = 'rose' },
   },
 }

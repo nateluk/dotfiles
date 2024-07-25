@@ -1,10 +1,5 @@
 return {
-  -- Colorschemes
-  { 'rose-pine/neovim', name = 'rose-pine' },
-  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
-  '0xstepit/flow.nvim',
-
-  -- Neovim UI
+  { 'rose-pine/neovim', name = 'rose-pine' }, -- Colorscheme
   'lewis6991/gitsigns.nvim',
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
   {
@@ -18,16 +13,8 @@ return {
       'MunifTanjim/nui.nvim',
     },
   },
-  {
-    'MeanderingProgrammer/markdown.nvim',
-    name = 'render-markdown', -- Only needed if you have another plugin named markdown.nvim
-    dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' },
-  },
-  -- File browser
-  { 'stevearc/oil.nvim' },
-
-  -- Formatter
-  'stevearc/conform.nvim',
+  { 'stevearc/oil.nvim' }, -- File browser
+  'stevearc/conform.nvim', -- Formatter
 
   -- Treesitter
   {
@@ -64,24 +51,16 @@ return {
   { 'rafamadriz/friendly-snippets' },
 
   -- Editing tools
-  -- 'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
-  {
-    'okuuva/auto-save.nvim',
-    cmd = 'ASToggle', -- optional for lazy loading on command
-    event = { 'InsertLeave', 'TextChanged' }, -- optional for lazy loading on trigger events
-  },
   'windwp/nvim-ts-autotag',
-  'numToStr/Comment.nvim',
-  'f-person/git-blame.nvim',
+  -- 'f-person/git-blame.nvim',
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
     config = true,
   },
-  { 'lukas-reineke/indent-blankline.nvim', main = 'ibl', opts = {} },
   'github/copilot.vim',
   'tpope/vim-surround',
-  'wellle/targets.vim',
+  -- 'wellle/targets.vim',
 
   -- For jest tests
   {
