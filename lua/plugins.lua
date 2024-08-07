@@ -1,4 +1,5 @@
 return {
+  'folke/tokyonight.nvim',
   { 'rose-pine/neovim', name = 'rose-pine' }, -- Colorscheme
   'lewis6991/gitsigns.nvim',
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -60,7 +61,7 @@ return {
   },
   'github/copilot.vim',
   'tpope/vim-surround',
-  -- 'wellle/targets.vim',
+  'wellle/targets.vim', -- Target brackets in line rather than parent
 
   -- For jest tests
   {

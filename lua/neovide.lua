@@ -19,7 +19,7 @@ vim.g.neovide_transparency = 0.9
 vim.g.neovide_window_blurred = true
 
 -- Font settings
-vim.opt.linespace = 5
+vim.opt.linespace = 15
 
 -- Cursor Settings
 vim.g.neovide_cursor_animate_command_line = false
