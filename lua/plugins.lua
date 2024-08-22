@@ -1,4 +1,6 @@
 return {
+  { 'EdenEast/nightfox.nvim' },
+  { 'catppuccin/nvim', name = 'catppuccin', priority = 1000 },
   'folke/tokyonight.nvim',
   { 'rose-pine/neovim', name = 'rose-pine' }, -- Colorscheme
   'lewis6991/gitsigns.nvim',
@@ -53,7 +55,6 @@ return {
 
   -- Editing tools
   'windwp/nvim-ts-autotag',
-  -- 'f-person/git-blame.nvim',
   {
     'windwp/nvim-autopairs',
     event = 'InsertEnter',
@@ -79,6 +80,17 @@ return {
   'kdheepak/lazygit.nvim',
 
   -- Utils
+  {
+    'karb94/neoscroll.nvim',
+    config = function()
+      require('neoscroll').setup {}
+    end,
+  },
+  {
+    'm4xshen/hardtime.nvim',
+    dependencies = { 'MunifTanjim/nui.nvim', 'nvim-lua/plenary.nvim' },
+    opts = {},
+  },
   {
     'folke/which-key.nvim',
     event = 'VeryLazy',

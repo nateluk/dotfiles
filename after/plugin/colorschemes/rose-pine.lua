@@ -16,6 +16,6 @@ require('rose-pine').setup {
     TelescopePreviewTitle = { fg = 'base', bg = 'iris' },
     TelescopePromptNormal = { fg = 'text', bg = 'overlay' },
     TelescopePromptBorder = { fg = 'overlay', bg = 'overlay' },
-    ['@lsp.type.property.typescript'] = { fg = 'rose' },
+    -- ['@lsp.type.property.typescript'] = { fg = 'rose' },
   },
 }
